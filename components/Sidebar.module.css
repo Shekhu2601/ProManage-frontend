@@ -1,0 +1,28 @@
+.container{
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 95vh;
+   
+}
+.btn{
+    background-color: transparent;
+    border: none;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    float: left;
+  
+}
+
+.logbtn{
+    position: absolute;
+    bottom: 30px;
+    background-color: transparent;
+    border: none;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    float: left;
+   
+}

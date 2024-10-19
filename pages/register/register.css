@@ -1,0 +1,48 @@
+.regiInput{
+    
+    width: 400px;
+    padding: 12px;
+    margin: 10px 10px 10px 0px;
+    border-radius: 7px;
+    border: 2px solid #C2C2C2;
+    
+}
+.regiBtn{
+    background: #17A2B8;
+    color: #FFFFFF;
+    width: 420px;
+    padding: 17px;
+    margin-top: 2rem;
+    
+   
+    border: none;
+    border-radius: 20px;
+
+}
+.route{
+
+color: #17A2B8;
+margin-top: 2rem;
+width: 390px;
+padding: 12px;
+margin-left: 4rem;
+
+
+
+
+
+border: 2px solid #17A2B8;
+border-radius: 20px;
+
+}
+.link{
+    text-decoration: none;
+    text-transform: none;
+    color: #17A2B8;
+}
+.subH{
+    font-size: 22px;
+    color: #828282;
+    margin-top: 2rem;
+
+}
