@@ -50,3 +50,16 @@
     border-radius: 10px;
 
 }
+.todobox{
+    display:flex;
+    justify-content:space-between;
+    margin: 10px;
+}
+.todos{
+    display: flex;
+    gap: 15px;
+}
+.createtodo{
+    font-size: 25px;
+    font-weight: bolder;
+}

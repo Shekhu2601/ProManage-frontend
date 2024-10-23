@@ -1,0 +1,51 @@
+.container{
+   
+    
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    height: 492px;
+    overflow-y: scroll;
+}
+.task{
+
+    
+    background-color: white;
+ gap: 20px;
+ padding: 8px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.taskD{
+    display: none;
+}
+.priority{
+color: #707070;
+font-size: 10px;
+
+}
+.priL{
+    color:  #63C05B;
+    margin-bottom:-5px;
+    font-size: 18px;
+}
+.priH{
+   color: #FF2473;
+   margin-bottom:-5px;
+   font-size: 18px;
+}
+.priM{
+    color:#18B0FF;
+    margin-bottom:-5px;
+   font-size: 18px;
+ }
+.title{
+    font-size: 20px;
+}
+
+
+
+
+
+
+

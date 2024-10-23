@@ -11,7 +11,7 @@ export default function App() {
       <Route path="/login" element={ <Login/>}/>
       <Route path="/register" element={<Register/> }/>
       <Route path="*" element={<NotFound/> }/>
-     {user &&  <Route path="/dashboard" element={<Dashboard/> }/>}
+     {user &&  <Route path="/dashboard" element={<Dashboard/> } />}
 
       
     </Routes>

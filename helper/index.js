@@ -38,4 +38,13 @@ export function isEditable(id){
     console.log(decoded)
     return decoded.id == id
    } 
+   export function isView(id){
+    const token= localStorage.getItem("token")
+    if(!token){
+        return false;
+    }
+    const decoded =decodeToken(token)
+    console.log(decoded)
+    return decoded.id == id
+   } 
    

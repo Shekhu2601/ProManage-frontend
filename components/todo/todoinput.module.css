@@ -1,0 +1,171 @@
+.wrapar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #303D438C;
+
+}
+.container{
+    position: fixed;
+  width: 680px;
+  height: 480px;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    
+   
+}
+.inputTitle{
+  width:90%;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #E2E2E2
+}
+.mandetary{
+  color: red;
+}
+.titlelabel{
+  font-size: 17px;
+}
+.prilabel{
+  font-size: 18px;
+  margin-left: -10px;
+
+}
+.prority{
+  display: flex;
+  margin: 10px;
+}
+.pri1{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  width: 22%;
+  border: 1px solid #E2E2E2;
+  color: #767575;
+margin-left: 10px;
+padding: 8px;
+font-weight: 500;
+border-radius: 5px;
+
+}
+.assignlabel{
+  font-size: 18px;
+}
+.assigninput{
+  width: 80%;
+  margin: 7px;
+  padding: 10px;
+  border: 1px solid #E2E2E2;
+}
+.checklistbox{
+  margin-top: 10px;
+  
+}
+
+  .checklist{
+    height:150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .checklistIn{
+    width: 92%;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #E2E2E2;
+  border: none;
+  
+
+  }
+  .check{
+    width: 20px;
+    margin-left: 10px;
+    
+  }
+  .inputs{
+    display: flex;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    margin: 10px;;
+    
+  }
+  .addNew{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #767575;
+   
+  }
+  .date{
+    width: 150px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #E2E2E2;
+    color: #767575;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .cancle{
+    width: 150px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #CF3636;
+    color:#CF3636;
+    font-weight: bold;
+    font-size: 15px;
+    
+
+
+  }
+  .save{
+    width: 150px;
+    background: #17A2B8;
+
+    padding: 11px;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .btndiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .del{
+    color: #CF3636;
+    margin-right: 15px;
+    font-size: 25px;
+
+  }
+  .redio{
+    display: none;
+  }
+  .gdot{
+    color: #63C05B;
+    font-size: 22px;
+  }
+  .bdot{
+    
+    font-size: 22px;
+    color: #18B0FF;
+  }
+  .rdot{
+    color: #FF2473;
+    font-size: 22px;
+    
+  }
+  
