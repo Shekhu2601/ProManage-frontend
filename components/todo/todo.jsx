@@ -50,7 +50,9 @@ export default function Tasklist() {
         });
         deleteTask(id)
       }
+     setTimeout(() => {
       window.location.reload()
+     }, 4000);
     });
     
   } 
