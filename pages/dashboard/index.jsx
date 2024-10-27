@@ -4,6 +4,7 @@ import Todo from "../../components/todo/todo"
 import styles from "./dashboard.module.css"
 import mini from "./mini.png"
 import Todoinput from "../../components/todo/todoinput"
+import Navbar from "../../components/navbar/navbar"
 export default function Dashboard (){
     const [open ,setOpen] =useState(false);
       const Close = ()=>{
@@ -17,7 +18,9 @@ export default function Dashboard (){
         </div>
         {open && <Todoinput Close={Close}/>}
         <div className={styles.home}>
-            <div className={styles.topbar}></div>
+            <div className={styles.topbar}>
+                <Navbar/>
+            </div>
             <div className={styles.main}>
                 <div className={styles.backlog}>
                     <p>Backlog  </p> 

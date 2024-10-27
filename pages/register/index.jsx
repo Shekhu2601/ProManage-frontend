@@ -82,6 +82,7 @@ export default function Register() {
         })
         if (!isError) {
             const res = await register(formData);
+           
             if (res.status === 200) {
                 alert("Registered successfully");
                 navigate("/login");

@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import styles from './login.module.css'
 import { Link } from "react-router-dom";
 import "./login.css"
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
     const navigate = useNavigate()
@@ -63,27 +65,29 @@ export default function Login() {
             if (!errorMessages[key].isValid) {
                 isError = true;
                 errorMessages[key].onError();
+               
             }
         })
         if (!isError) {
             const res = await login(formData);
-           try{
+           
             if (res.status === 200) {
-              alert("Login successfully");
+              toast.success("Login successfully" );
               const token =res.data.token;
+              const user =res.data.email;
+              localStorage.setItem("user",user)
               localStorage.setItem("token",token)
               navigate("/dashboard");
+              window.location.reload()
           }
-          else {
-              alert("Something went wrong");
+          else if (res.status===400){
+            alert("erore something")
+            
           }
-           }
-           catch(e) {
-            if (e.res.status===400) {
-              alert("Invalid email or password");
-          }
-           }
-            setFormData( "")
+         
+           
+          
+           
         }
     }
     const errorMessages = {

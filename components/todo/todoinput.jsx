@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import styles from "./todoinput.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
-import { taskcreate } from "../../services/task";
+import { editTask, fetchTaskById, taskcreate } from "../../services/task";
+import Swal from 'sweetalert2'
+
+
 export default function Todoinput({ Close }) {
   const navigate = useNavigate();
+  const params=useParams()
+    const id =params.id;
+    const isEdit= !!id;
   const [formData, setFormData] = useState({
     title: "",
     priority: "",
@@ -13,8 +19,13 @@ export default function Todoinput({ Close }) {
     checklists: "",
     checkbox:false
   });
-  const [btn, setBtn] = useState("Create Account");
+  
+const closs =()=>{
+  
+  navigate("/dashboard")
+  Close()
 
+}
   const [error, setError] = useState({
     title: false,
     priority: false,
@@ -95,10 +106,22 @@ const errorMessages ={
             }
         })
         if (!isError) {
-            const res = await taskcreate(formData);
+            const res = isEdit? await editTask(formData): await taskcreate(formData);
             if (res.status === 201) {
-                alert("task create successfully");
+               
+                
+                Swal.fire({
+                  position: "top-center",
+                  icon: "success",
+                  title:  `task ${isEdit ? "Edit":"create"}  successfully`,
+                  showConfirmButton: false,
+                  timer: 2000
+                });
                Close()
+               navigate("/dashboard")
+             setTimeout(() => {
+              window.location.reload()
+             }, 2000);
             }
             else {
                 alert("Something went wrong");
@@ -107,6 +130,29 @@ const errorMessages ={
     
 
   }
+  const fillTaskdata =(data)=>{
+    const{
+      title,
+      priority,
+      assign,
+      checklists,
+      checkbox
+    }=data
+    setFormData({
+      title,
+      priority,
+      assign,
+      checklists,
+      checkbox
+    })
+  }
+  useEffect(()=>{
+    
+        fetchTaskById(id).then(res=>{
+          fillTaskdata(res.data)
+        })
+    
+},[])
   return (
     <>
       <div onClick={Close} className={styles.wrapar}></div>
@@ -214,8 +260,8 @@ const errorMessages ={
         <div className={styles.btndiv}>
           <button type="button" className={styles.date}>Select Due Date</button>
           <div>
-            <button onClick={Close} className={styles.cancle}>
-            Cancle
+            <button onClick={closs} className={styles.cancle}>
+            Cancel
           </button>
           <button type="submit"  className={styles.save}>Save</button>
           </div>

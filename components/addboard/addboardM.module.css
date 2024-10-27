@@ -1,0 +1,61 @@
+.wrapar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #303D438C;
+
+}
+.container{
+    position: fixed;
+  width: 500px;
+  height: 150px;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    
+   
+}
+.inputs{
+    width: 450px;
+    display: flex;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    
+  }
+  .cancle{
+    width: 350px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #CF3636;
+    color:#CF3636;
+    font-weight: bold;
+    font-size: 15px;
+    
+
+
+  }
+  .save{
+    width: 350px;
+    background: #17A2B8;
+
+    padding: 11px;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .btndiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }

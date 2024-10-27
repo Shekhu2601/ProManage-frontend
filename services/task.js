@@ -1,5 +1,7 @@
 import axios from "axios";
 import {AddTokenToHeader } from "../helper";
+import { useParams } from "react-router-dom";
+
 export function getAllTask() {
    const headers = AddTokenToHeader({ headers: {} });
     const res = axios.get(`${import.meta.env.VITE_BASE_URL}/api/task`,{
@@ -19,7 +21,7 @@ export function fetchTaskById(id) {
     //     reject(new Error("Something went wrong"));
     // })
     const headers = AddTokenToHeader({ headers: {} });
-    const res = axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/job/${id}`, {
+    const res = axios.put(`${import.meta.env.VITE_BASE_URL}/api/task/${id}`, {
         headers
     });
     return res;
@@ -31,10 +33,20 @@ export function taskcreate(data) {
     });
     return res;
 }
-export function editTask(data,id) {
-    const headers = AddTokenToHeader({ headers: {} });
-    const res = axios.put(`${import.meta.env.VITE_BASE_URL}/api/v1/job/${id}`, data, {
-        headers
+export function editTask(id) {
+   
+    const res = axios.put(`${import.meta.env.VITE_BASE_URL}/api/task/${id}`, {
+        method:"PUT"
     });
+    return res;
+}
+export function deleteTask(id) {
+   
+    
+    const res = axios.delete(`${import.meta.env.VITE_BASE_URL}/api/task/${id}`,{
+        method:"DELETE"
+    }
+        
+    );
     return res;
 }

@@ -6,7 +6,7 @@ export function AddTokenToHeader({ headers }) {
     return headers;
 }
 export function handleApiResponse(res) {
-    switch (res?.response?.status) {
+    switch (res.response?.status) {
         case 401:
             localStorage.removeItem("token");
             alert("You're logged out");

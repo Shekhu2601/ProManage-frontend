@@ -42,8 +42,54 @@ font-size: 10px;
 .title{
     font-size: 20px;
 }
-
-
+.check{
+    width: 170px;
+    border: 1.5px solid #E2E2E2;
+    padding:2px ;
+    border-radius: 7px;
+    
+}
+.inc{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+.cb{
+    display: flex;
+    margin-top: 10px;
+}
+.arrow{
+    margin-left: 60px;
+    height: 18px;
+}
+.edbt{
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: 900;
+    width: 10px;
+    
+}
+.dot{
+    float:right;
+    margin-top: -70px;
+    
+}
+.e{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 20px;
+    float: ;
+    
+    
+}
+.edbtn{
+    border: none;
+    background-color: white;
+  
+    
+}
 
 
 

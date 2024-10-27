@@ -16,3 +16,4 @@ export const register =async(data)=>{
             }
         });
         return res; }
+      
